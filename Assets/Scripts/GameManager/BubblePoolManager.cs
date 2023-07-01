@@ -34,6 +34,12 @@ public class BubblePoolManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// I have decided to use object pooling, in case we want to create a level with many bubbles.
+    /// right now it is not really necessary.
+    /// </summary>
+    /// <returns>returns an unused bubble</returns>
+
     public GameObject GetPooledObject()
     {
         for (int i = 0; i < amountToPool; i++)
@@ -46,6 +52,9 @@ public class BubblePoolManager : MonoBehaviour
         return null;
     }
 
+    /// <summary>
+    /// returns all bubbles to the pool
+    /// </summary>
     public void ReleaseAll()
     {
         for (int i = 0; i < amountToPool; i++)

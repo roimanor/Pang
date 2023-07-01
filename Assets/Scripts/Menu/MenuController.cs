@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MenuController : MonoBehaviour
 {
+    /// <summary>
+    /// I would normally use a state machine, but couldn't find an implementation, and was strapped for time.
+    /// </summary>
     public static MenuController Instance;
 
     [SerializeField] private GameObject mainMenu;

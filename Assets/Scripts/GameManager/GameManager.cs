@@ -31,6 +31,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Updates timer
+    /// </summary>
     private void Update()
     {
         if (gameRunning)
@@ -41,15 +44,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Initializes the game
+    /// </summary>
     public void StartGame()
     {
         currentStage = startStage;
         _points = 0;
-        MenuController.Instance.ShowInGameMenu();
-        gameRunning = true;
-        LoadStage();
+        NextStage();
     }
 
+    /// <summary>
+    /// Initializes stage
+    /// </summary>
     public void NextStage()
     {
         MenuController.Instance.ShowInGameMenu();
@@ -57,6 +64,9 @@ public class GameManager : MonoBehaviour
         LoadStage();
     }
 
+    /// <summary>
+    /// Loads stage from the scriptable object
+    /// </summary>
     private void LoadStage()
     {
         Assert.IsNotNull(currentStage);
@@ -73,6 +83,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Pulls up the end stage screen
+    /// </summary>
     private void FinishStage()
     {
         if (currentStage.nextStage == null)
@@ -96,6 +109,9 @@ public class GameManager : MonoBehaviour
         MenuController.Instance.ShowMainMenu();
     }
 
+    /// <summary>
+    /// Calculates points, and counts the active bubbles to indicate when the stage is over
+    /// </summary>
     public void DestroyBubble()
     {
         _points += 200;

@@ -34,6 +34,9 @@ public class BubbleController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Spawn child bubbles when current one is destroyed 
+    /// </summary>
     [ContextMenu("DestroyBubble")]
     public void DestroyBubble()
     {
@@ -47,6 +50,10 @@ public class BubbleController : MonoBehaviour
         GameManager.Instance.DestroyBubble();
     }
 
+    /// <summary>
+    /// Spawns a smalled bubble with less health, and less bounce factor.
+    /// </summary>
+    /// <param name="right">Indicates wether the bubble's velocity is to the right or left</param>
     public void SpawnSmallerBubble(bool right)
     {
         BubbleModel newBubbleModel;
