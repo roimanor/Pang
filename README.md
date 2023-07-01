@@ -9,3 +9,6 @@ I chose to implement those two, because I am used to the MVC paradigm, as I use 
 and I chose to imeplement the distinct levels optinal task, because it seemed to require little effort to implement.
 
 I contemplated implementing the two-player local multiplayer, but I couldn't figure out what it would look like on mobile.
+
+
+The controls are left arrow, right arrow, and up arrow on keyboard
