@@ -17,7 +17,10 @@ public class BorderPlacer : MonoBehaviour
     {
         PlaceBorders();
     }
-
+    
+    /// <summary>
+    /// places the game borders in the left, top, bottom and right of the screen.
+    /// </summary>
     [ContextMenu("Place Borders")]
     public void PlaceBorders()
     {
